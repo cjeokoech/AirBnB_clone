@@ -32,7 +32,7 @@ def parse(arg):
 
 
 class HBNBCommand(cmd.Cmd):
-    """Defines the HolbertonBnB command interpreter.
+    """Defines the HBNB command interpreter.
 
     Attributes:
         prompt (str): The command prompt.
@@ -108,7 +108,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
         elif len(argl) == 1:
             print("** instance id missing **")
-        elif "{}.{}".format(argl[0], argl[1]) not in obj:
+        elif "{}.{}".format(argl[0], argl[1]) not in obj_dict:
             print("** no instance found **")
         else:
             print(obj_dict["{}.{}".format(argl[0], argl[1])])
